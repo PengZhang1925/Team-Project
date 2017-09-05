@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>Login | Cast Solution</title>
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+  <link rel="stylesheet" href="css/login_style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+
+</head>
+
+<!-- 	header -->
+ <header>
+
+<a href="https://www.castsolutions.com.au/">
+<img id="logo" src="img/LOGO-01.png"/>
+</a>
+</header>
+  <body onload="checkCookie()">
+	<div class="login">
+		<div class="login-screen">
+			<div class="login-title">
+				<!-- <h4 style="margin-top: 10px; margin-bottom: 10px;">Login</h4> -->
+				<img id="loginImg" src="img/login.png"/>
+			</div><br>
+			<div class="login-form">
+				<div class="input-group">
+				<input type="text" class="login-field" name="username" placeholder="username" id="login-name" required><br><br>
+				<input type="password" class="login-field" name="password" placeholder="password" id="login-pass" required><br><br>
+                <p style="color:red" id="test"></p>
+				 <input class="btn"  type="submit" value="Login" name="login" style='cursor:pointer' onclick="showHint();setTime();"/>
+				</div>
+
+				<!-- <a class="resetPassword-link" href="resetpassword.html">Forgot your password?</a> -->
+				<a id="forgotPass" onclick="myFunction1()" style='cursor:pointer' class="resetPassword-link">Forgot your password?</a>
+				<br>
+        </div>
+		</div>
+	</div>
+
+		<div class="reset">
+		<div class="login-screen">
+			<div class="login-title">
+				<!-- <h4 style="margin-top: 10px; margin-bottom: 10px;">Password Reset</h4> -->
+				<img id="resetKey" src="img/key.png"/>
+			</div><br>
+				<p class="alartWords">Enter your email, and we'll send you instructions on how to reset your password.</p>
+			<div class="reset-form">
+				<form action="php/login.php" method="POST">
+				<div class="input-group">
+				<input type="email" class="reset-email" name="email"  placeholder="Email" id="email-name" required></p>
+				<input type="text" class="reset-user" name="username"  placeholder="Username" id="reset-username" required></p>
+				<input type="submit" class="btn" style='cursor:pointer' name="forget" value="Send Me New Password"/>
+        </form>
+        <form action="login.html" method="POST">
+
+        <input type="submit" class="btn" style='cursor:pointer' name="forget" value="Back"/><br>
+        <div class="popup" onclick="popUps()"><i id="resetHelp" title="" class="material-icons md-18 blue">help_outline</i>
+          <span class="popuptext" id="myPopup">Reset Password</br>
+          Step 1: Please input your email and username.</br>
+          Step 2: Click 'Send me New Password' button.</br>
+          Step 3: You will receive a random new password in your email.</span>
+        </div><br>
+      </form>
+
+				<!-- <label class="label-reset-email" for="reset-pass"></label> -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-12 right">
+	  <div class="footer">
+	    <p>&copy; 2017 Cast Solutions </p>
+	  </div>
+	</div>
+</body>
+
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/setTime.js"></script>
+
+<!--   footer -->
+<!-- <footer> <P id="copy"> &copy; 2017 Cast Solutions   </P> </footer> -->
+</html>

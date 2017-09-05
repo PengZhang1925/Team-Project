@@ -1,0 +1,281 @@
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+/*set font of all website*/
+
+body {
+font-family: 'Open Sans', sans-serif;
+background-color: #ffffff;
+margin: 0 0 0 0;
+}
+
+/*set font family for input, paragraph and icon attribute */
+
+input,p,i {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*set font family for h1-h3 attribute */
+h1,h2,h3 {
+  font-family: 'Open Sans', sans-serif;;
+  font-weight: bold;
+}
+
+/*the style of login interface*/
+.login {
+  float: middle;
+  margin: 0px auto;
+  max-width: 500px;
+  padding-top: 150px;
+  display: block;
+}
+
+/*the style of reset password interface*/
+.reset {
+  float: middle;
+  margin: 0px auto;
+  max-width: 500px;
+  padding-top: 150px;
+  display: none;
+}
+
+/*login and reset interface div style*/
+.login-screen {
+  border-color: #ccc;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+/*login and reset interface div style*/
+.login-title {
+text-align: center;
+border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+
+/*for login icon image*/
+#loginImg {
+  height: 50px;
+  width: 50px;
+}
+
+/*for reset interface icon image*/
+#resetKey {
+  height: 50px;
+  width: 50px;
+}
+
+#forgotPass:hover {
+  color: #ED8B00;
+}
+
+.reset-form {
+text-align: center;
+}
+
+.login-form {
+	margin-top: 10px;
+text-align: center;
+}
+.input-group {
+margin-bottom: 10px;
+}
+
+/*for help question mark*/
+#resetHelp {
+  cursor: pointer;
+}
+
+/*.input-group input[type="submit"]{
+
+}*/
+
+/*set the style when user inputting words*/
+input {
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+max-width: 350px;
+width: 100%;
+transition: border .5s;
+}
+
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+ /*style of button */
+.btn {
+  border: 2px solid transparent;
+  background: #24427b;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: left;
+  max-width: 350px;
+  width: 35%;
+  margin: 1px 2px;
+}
+
+.btn:hover {
+  background-color: #3e61a5;
+}
+
+.resetPassword-link {
+  font-size: 16px;
+  color: #444;
+  display: block;
+	margin-top: 18px;
+}
+
+/* Media Queries
+ make page responsive by using media queries,
+ when window width smaller than 480px,
+ change the width of login and reset interface to full screen. 
+ */
+@media screen and (max-width: 480px) {
+
+  body {
+    padding: 0px;
+  }
+
+  .login .login-screen .login-link .login-form{
+    width: 100%;
+  }
+
+  .col-12 {width: 100%;}
+}
+
+/*for the size of icon */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-20 { font-size: 20px; }
+.material-icons.md-24 { font-size: 24px; } /* Default */
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/*for the color of icon */
+.blue { color: #24427b; }
+.red {color: 	#FF3333;}
+.white {color: white; }
+.white:hover { color: #24427b; }
+
+/*the style of header*/
+header{
+    background-color: rgba(255, 255, 255, 0.8);
+    float:left;
+    min-width:100%;
+    height: 12%;
+    position:fixed;
+  }
+
+/*the style of footer*/
+ .footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 10px;
+    /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+}
+
+ /* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+/*the style of case solution logo*/
+ #logo {
+  width:202px;
+  height:56px;
+  object-fit: cover;
+  margin-left: 5%;
+  margin-top: 1%;
+
+}
+
+/*copyright in footer*/
+#copy{
+  padding-left: 5%;
+}
+
+/*alart words of reset password page*/
+.alartWords {
+  font-size: 12px;
+  text-align: center;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+		font-family: 'Open Sans', sans-serif;
+    visibility: hidden;
+    width: 300px;
+    background-color: #ECF0F1;
+    color: #333;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -150px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
